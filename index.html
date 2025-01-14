@@ -9,5 +9,25 @@
        <h1>
         This is a bot to test the Real Game
        </h1> 
+     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+       <script>
+            window.addEventListener('load',event=>{
+                const initData = Telegram.WebApp.initData
+
+                fetch('https://alaromdhani.com/authenticate',{
+                    method:'POST',
+                    body:JSON.stringify({initData})
+                }).then(data=>{
+
+                    return data.json()
+                }).then(data=>{
+                    console.log(data)
+                })
+
+
+
+            })
+       </script>
+
 </body>
 </html>
